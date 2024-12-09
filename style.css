@@ -6,6 +6,13 @@ h1 {
     text-align: center;
 }
 
+button {
+    display: flex;
+    justify-self: center;
+    text-align: center;
+    margin-bottom: 2rem;
+}
+
 .container {
     display: flex;
     flex-wrap: wrap;
