@@ -22,13 +22,15 @@ function createGrid(size){
         
         const cell = document.createElement("div");
         cell.classList.add("cell");
-        cell.style.background = "red";
-        // cell.style.border = "1px solid black";
+        cell.style.background = "black";
         cell.style.width = `${width}px`
         cell.style.height = `${width}px`
         cell.style.flex = `0 0 auto`;
         cell.addEventListener("pointerenter", () => {
-            cell.style.background = ("blue");
+            let r = Math.floor(Math.random() * 255).toString(16);
+            let g = Math.floor(Math.random() * 255).toString(16);
+            let b = Math.floor(Math.random() * 255).toString(16);
+        cell.style.background = `#${r+g+b}`;
         });
         
         container.appendChild(cell);
