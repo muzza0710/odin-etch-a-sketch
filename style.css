@@ -17,7 +17,11 @@ button {
     display: flex;
     flex-wrap: wrap;
     flex: 0 0 100%;
-    width: 320px;
+    width: 480px;
     justify-self: center;
+}
+
+.container div:hover{
+    background: blue;
 }
 
