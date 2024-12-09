@@ -2,7 +2,6 @@ const container = document.querySelector(".container");
 const resizeGridBtn = document.querySelector("button");
 let numOfRows = 16
 let width = container.offsetWidth / numOfRows;
-let opacity = 0.1
 
 createGrid(numOfRows)
 
@@ -19,6 +18,7 @@ resizeGridBtn.addEventListener("click", () => {
 })
 
 function createGrid(size){
+    let opacity = 0.1
     for (let i = 0; i < size * size; i++) {
         
         const cell = document.createElement("div");
