@@ -6,11 +6,20 @@ h1 {
     text-align: center;
 }
 
+.active  {
+    background-color: green;
+    border-style: ridge;
+}
+
 button {
-    display: flex;
-    justify-self: center;
     text-align: center;
+}
+
+.btnContainer {
     margin-bottom: 2rem;
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
 }
 
 .container {
@@ -21,7 +30,4 @@ button {
     justify-self: center;
 }
 
-.container div:hover{
-    background: blue;
-}
 
