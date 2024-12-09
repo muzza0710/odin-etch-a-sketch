@@ -2,6 +2,7 @@ const container = document.querySelector(".container");
 const resizeGridBtn = document.querySelector("button");
 let numOfRows = 16
 let width = container.offsetWidth / numOfRows;
+let opacity = 0.1
 
 createGrid(numOfRows)
 
@@ -22,15 +23,15 @@ function createGrid(size){
         
         const cell = document.createElement("div");
         cell.classList.add("cell");
-        cell.style.background = "black";
+        cell.style.background = `rgb(255 0 0/${opacity}`;
         cell.style.width = `${width}px`
         cell.style.height = `${width}px`
         cell.style.flex = `0 0 auto`;
         cell.addEventListener("pointerenter", () => {
-            let r = Math.floor(Math.random() * 255).toString(16);
-            let g = Math.floor(Math.random() * 255).toString(16);
-            let b = Math.floor(Math.random() * 255).toString(16);
-        cell.style.background = `#${r+g+b}`;
+            if(opacity < 1){
+                opacity += 0.05;
+            }
+        cell.style.background = `rgb(0 0 0/${opacity}`;
         });
         
         container.appendChild(cell);
